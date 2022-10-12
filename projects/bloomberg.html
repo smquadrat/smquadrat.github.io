@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSJR4TTE87"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WSJR4TTE87');
+    </script>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -23,35 +31,40 @@
         <h4>TL;DR</h4>
         <p>
           Built an investment insight-driven product to bridge the gap between frictionless investing apps 
-          such as Robinhood and the often limited investing knowledge of their users. Utilized input from 
-          potential users, industry veterans and A/B testing to build an MVP centered around an investment 
-          insights feed. I ultimately deprecated this project due to a lack of clarity around monetization potential.
+          such as Robinhood and the often limited investing knowledge of their users. Utilized input from users, 
+          industry veterans and A/B testing to build an MVP centered around an investment insights feed. 
+          I ultimately deprecated this project due to a lack of clarity around its monetization potential.
         </p>
 
         <hr>
         <h4>Personal Objective: </h4>
         <p>
-          I undertook this project to help bolster my product acumen by taking a product from 0 to 1. 
-          Managing a small startup team and learning through trial and error were instrumental to 
-          building my understanding of what it takes to run a concept all the way from ideation
-          to a functioning software product that brings real value to users.
+          I undertook this project to help bolster my consumer product acumen by taking a B2C product 
+          from 0 to 1. Managing a small startup team and learning through trial and error were instrumental to 
+          building my understanding of what it takes to run a concept all the way from ideation to a functioning 
+          software product that brings value to users.
         </p>
 
         <p> 
         <h4>Problem: </h4>
         <p>
           Robinhood brought in a new cohort of investors through its frictionless trading app. 
-          However, there was a clear disconnect between the newfound ease of trading and knowledge level 
-          needed for these users to invest responsibly
+          However, there has been a clear disconnect between the newfound ease of trading and knowledge level 
+          needed for these users to invest responsibly. Retail investors, who have historically been
+          at a disadvantage due to lack of knowledge, poor access to key data and a general lack of guidance,
+          were prone to overtrading with the Robinhood app's emphasis on gamification to maximize engagement.
+          It didn't help that the reliance of Robinhood's business model on selling customer trade data 
+          to market makers may have aligned its incentives toward maximizing trades made rather than 
+          prioritizing actual user outcomes.
         </p>
         <h4>Solution: </h4>
         <p>
-          Using the ease of use and clean processed data found in the Bloomberg Terminal as inspiration,
-          I set out to develop an app that would bridge the disconnect described above by providing users
-          with relevant investment insights that would improve their ability to invest. Based on early
-          user input, research and given the realtime nature of markets and investing in general, 
-          I determined that the app should revolve around a central feed that would be consistently updated 
-          with the most relevant insights at the top.
+          Using the ease of use and access to clean processed data found in the Bloomberg Terminal as 
+          inspiration, I set out to develop an app that would bridge the disconnect described above by 
+          providing users with relevant investment insights that would improve their ability to invest. 
+          Based on early user feedback, product research and given the realtime nature of markets and 
+          investing in general, I determined that the app should revolve around a central feed that 
+          would be regularly updated with the most relevant insights at the top.
         </p>
 
         <h4>Process: </h4>
@@ -60,7 +73,7 @@
           knowledge levels and portfolio sizes. These interviews helped me identify 3 key user segments:
         </p>
         <p>
-          1) Complete neophyte investors (have made a total of less than 5 trades)
+          1) Complete neophyte investors (have made a total of less than 5 lifetime trades)
         </p>
         <p>
           2) Investors (typically make investments every month)
@@ -70,19 +83,22 @@
         </p>
         <p>
           I also brought in key advisors that had either built institutional-grade investment tools or 
-          worked for established brokerages to provide us with related know-how.
+          worked for established brokerages to provide related know-how.
         </p>
         <p>
           For the app build, we vetted and hired two engineers in Ukraine that specialized in React Native.
           The build was broken up into 3 key milestones with approximately 2 weeks allotted for each. 
           At the same time I worked with a designer in San Francisco to map out and hone the app UX in Figma. 
-          Prototype mock-ups were regularly shown to our user group in order to solicit constant feedback
-          to help determine development direction. 
+          A great deal of time was spent at this stage mapping out user flows and guaging how best to 
+          package and present relevant investment insights to users. Prototype mock-ups were regularly shown 
+          to our user group and key advisors in order to solicit constant feedback that helped guide 
+          development direction. 
         </p>
         <p>
           The market segment I ultimately decided to pursue was between 2) Investors and 3) Regular traders
           as these users were already more engaged, had typically moved beyond the investing basics and
-          were mainly seeking some level of direction in making their investments.
+          were mainly seeking some level of direction in making their investments. This helped the core focus of
+          the app remain on investment insights rather than move into investor education.
         </p>
         <h4>Outcome: </h4>
         <p>
@@ -94,16 +110,16 @@
           and the value proposition presented. It turned out that potential customers would pay for an app that 
           outright told them what financial instruments to buy or sell rather than one that would improve 
           their existing decision-making process. Going in this direction would get into sticky regulatory 
-          issues around financial recommendations as well as potential for making poor calls due to a myriad 
-          of reasons (macro environment shifts, surprise announcements, etc.) A clear path to monetization 
-          was just not there despite the perceived product market fit. 
+          issues around financial recommendations as well as potentially poor calls due to a myriad 
+          of reasons out of our control (macro environment shifts, surprise announcements, etc.) 
+          A clear path to monetization was just not there despite the perceived product market fit. 
         </p>
         <h4>Post-Mortem: </h4>
         <p>
           If I did this project again, I would:
         </p>
         <p>
-          A) Hold off on building until there was an ironclad monetization strategy in place that had 
+          A) Hold off on building an app until there was an ironclad monetization strategy in place that had 
           been properly vetted by end-user research.
         </p>
         <p>

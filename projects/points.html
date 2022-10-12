@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSJR4TTE87"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WSJR4TTE87');
+    </script>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -19,34 +27,34 @@
     </nav>
     <article>
         <h1>Projects</h1>
-        <h2>Debit cards points API for financial institutions</h2>
+        <h2>Debit card point API for financial institutions</h2>
         <h4>TL;DR</h4>
         <p>
-          Built an API that would give points collecting capabilities to debit cards issued by small to mid-sized
+          Built an API that would give point collecting capabilities to debit cards issued by small to mid-sized
           financial institutions (i.e. credit unions and regional banks). Even though there was strong interest
-          from two potential MVP candidates, the technical complexities of integrating with antiquated on-prem systems
-          proved too great and I didn't pursue the project to the implementation phase.
+          from two potential MVP candidates, the technical complexities around integrating with antiquated on-prem systems
+          proved too great and I didn't pursue this project to the implementation phase.
         </p>
 
         <hr>
         <h4>Personal Objective: </h4>
         <p>
-          I undertook this project to learn about what it took to build, sell and ultimately integrate enterprise
+          I undertook this project to learn about what it took to build, sell and ultimately integrate B2B enterprise
           software for financial institutions. I spent a fair portion of my career analyzing and working within 
           major banks so was somewhat familiar with the regulatory and technical complexities associated with selling
-          software to them. However, actually doing so would teach me a great deal on just how onerous and challenging
+          software to them. However, actually doing so would teach me a great deal about just how onerous and challenging
           this process was for all stakeholders involved.
         </p>
 
         <p> 
         <h4>Problem: </h4>
         <p>
-          Chase, Citi and AmeEx are the top 3 largest card issuers in the United States by market share. All three place
+          Chase, Citi and Amex are the top 3 largest card issuers in the United States by market share. All three place
           strong emphasis on their point card offerings, which they use to lock customers into their respective 
           financial ecosystems. Chase and Citi, which are parts of massive multinational financial service conglomerates, 
           are able to upsell customers to high value products such as home mortgages. Although most small to mid-sized 
           financial institutions issue their own debit cards, the majority don't bother with point systems due to the complexity 
-          and resources involved with building such a system internally. As a result, they lose a potentially strong
+          and resources involved with building such products internally. As a result, they lose a potentially strong
           ecosystem enhancer that could better lock-in customers and make it easier to upsell higher value products
           such as home mortgage loans down the line.
         </p>
@@ -60,22 +68,24 @@
         <h4>Process: </h4>
         <p>
           I started off by speaking to numerous individuals that had worked for the credit card divisions of major banks
-          in order to assess how internal systems were architected and growth strategies carried out. An interesting
-          learning from these conversations was even in recent years there was little effort made to build a concerted
-          strategy around actively upselling credit card customers to higher value products based on card activity. This was
-          in large part due to limited collaboration between the teams that would enable this.  
+          in order to assess how internal systems were architected and what growth strategies were employed to build point
+          programs over time. One interesting takeaway from these conversations was that even in recent years there has been
+          little effort made to build a concerted strategy around actively upselling credit card customers to higher value 
+          products based on card activity. This was in large part due to limited collaboration between the teams in massive
+          organizations that could enable this.  
         </p>
         <p>
           I worked with an engineer to map out the API and identify how it would ingest data from debit cards via Visa
-          and Mastercard APIs, tag relevant transactions with points from participating retailers and interface with 
-          bank systems. APIs were scoped for both banks that still maintained on-prem systems and those which had 
-          migrated to cloud systems.
+          and Mastercard APIs, tag relevant customer transactions with points from participating retailers (i.e. Starbucks, etc.) 
+          and interface with bank systems. APIs were scoped for both banks that still maintained on-prem systems and those which 
+          have migrated to cloud systems.
         </p>
         <p>
           I was able to get in front of decision makers within two regional banks in order to assess product-market fit 
-          and determine how to best integrate an MVP with bank systems. I also reached out to startup founders that had
-          successfully sold to banks in order to map out a path forward. Though these conversations went well, the subsequent 
-          technical challenges of how to successfully integrate the API with bank systems became readily clear.
+          and determine how to best integrate an MVP with bank systems. I also spoke with B2B startup founders that had
+          successfully sold their software products to banks in order to map out a path forward. Though these conversations
+          were illuminating, the subsequent technical challenges of how to successfully integrate the API with bank systems 
+          became readily clear.
         </p>
 
         <h4>Outcome: </h4>
@@ -91,15 +101,15 @@
           If I did this project again, I would:
         </p>
         <p>
-          A) Look to embed our engineering efforts with a bank partner from Day 1 to get it up and running
+          A) Look to embed our engineering efforts with a bank partner from Day 1 to get a proof of concept up and running
           as soon as possible.
         </p>
         <p>
-          B) Once the MVP was up and running with the first customer, I would  look to identify common 
+          B) Once the MVP was up and running with the first customer, I would look to identify common 
           build components and those that needed to be customized for each customer financial institution 
-          in order to develop efficient sales and integration roadmaps that could be used for subsequent 
+          in order to develop efficient sales and integration roadmaps that could be used for winning over subsequent 
           customers. I would also group financial institutions by internal software architectures in order to 
-          better target the most promising early customers.
+          identify and specifically target the most promising early customers.
         </p>
 
 
