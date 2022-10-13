@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSJR4TTE87"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WSJR4TTE87');
+    </script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Sebastian Quadrat</title>
+    <meta name="description" content="Personal webpage">
+    <meta name="author" content="Sebastian Quadrat">
+  </head>
+  <body>
+    <header>
+      Sebastian Quadrat
+    </header>
+    <nav>
+        <a href="index.html">Projects</a>
+        <a href="../index.html">About</a>
+    </nav>
+    <article>
+        <h1>Projects</h1>
+        <h2>Gamma Exposure Calculator</h2>
+        <h4>TL;DR</h4>
+        <p>
+          Built a calculator that estimates the gamma exposure of market makers using ingested option chain data.
+          This is useful in determining if market makers are being forced to buy or sell a certain asset in order
+          to maintain neutral footing. Input data came from the TD API (instrument pricing) and the CBOE website 
+          (option chains) while processed data was outputted in the form of a matplotlib chart and a csv file
+          containing underlying data.
+        </p>
+
+        <hr>
+        <h4>Personal Objective: </h4>
+        <p>
+          I undertook this project to learn about what it takes to build a useful app from scratch as it solved an 
+          actual problem I had in determining how market makers are positioned for a given security (i.e. S&P 500). 
+          Although my initial objective was to simply output a gamma exposure (GEX) figure, over time I added
+          additional capabilities and features.
+        </p>
+
+        <p> 
+        <h4>Problem: </h4>
+        <p>
+          Gamma exposure calculations exist in somewhat of an esoteric realm given how few traders and investors
+          would know about or, much less, utilize them. As a result they are not (to my knowledge) included as a
+          part of any of the major brokerage platforms (i.e. Interactive Brokers, Thinkorswim, etc.) Part of this
+          may also be due to how data intensive these calculations can be; an option chain for popular high volume 
+          securities can involve thousands of data points.
+        </p>
+        <h4>Solution: </h4>
+        <p>
+          I decided to utilize Python due to its great out-of-the-box data science capabilities and numerous useful 
+          built-in libraries. Input data came from the TD API (instrument pricing in json format) and the CBOE website 
+          (option chains in csv format) while processed data was outputted in the form of a matplotlib chart and a 
+          csv file containing underlying data.
+        </p>
+
+        <h4>Process: </h4>
+        <p>
+          I started off by putting together a scoping doc in which I outlined project objectives (output GEX figure for
+          given instrument), risks (poor/eroneous data, scope creep), milestones (1 - Pull data, 2 - Calculation 3 - 
+          Output to chart/csv), assumptions (access to reliable data) and constraints (free data). 
+
+        <p>
+          1 - Pull Data
+        </p>
+        <p>
+          I needed to get a hold of live market data along with corresponding option chains. As I didn't want to use 
+          paid data (which can be absurdly expensive) I tested Yahoo Finance, Interactive Brokers and TDAmeritrade data
+          APIs. After numerous API reliability issues with the former two, I found the TD API to be vastly superior and 
+          linked to it. However, when it came to options data, I found it to have throttling issues when pulling entire 
+          option chains so utilized CBOE excel data instead. The CBOE website is notoriously strict about bulk data
+          pulls so I ran Selenium with a headless Chrome webdriver in order to automate the manual downloading of csv
+          files containing option chain data for each instrument.
+        </p>
+        <p>
+          2 - Calculation
+        </p>
+        <p>
+          As the CBOE option chain data was formatted in a particular way it needed a considerable amount of preprocessing,
+          which I achieved with Pandas dataframes to locate and strip certain dates, times and numbers. I extracted bid,
+          ask, last sale, implied volatility, delta, gamma, open interest and strike data and placed it into a new
+          dataframe. From there I was able to calculate updated option greeks and ultimately GEX itself with the help of
+          the py_vollib library. 
+        </p>
+        <p>
+        <p>
+          3 - Output
+        </p>
+        <p>
+          I initially outputted corresponding GEX values using a simple print statement to the IDE terminal but later 
+          added a simple matplotlib graphic along with output csv files in an output directory. Given how time-consuming 
+          the calculation process could be, it was important to make it easy to reference outputs that didn't need to be 
+          constantly recalculated.
+        </p>
+        <p>
+
+        <h4>Outcome: </h4>
+        <p>
+          The final result exceeded my expectations and delivered on my original objective of outputting a gamma 
+          exposure figure for any given publically traded instrument that also trades as options. I added loops 
+          for pulling the latest price and option chain for securities contained in a feeder file, output csv 
+          files stored in their own directory and even a Streamlit dashboard to display daily outputs from 
+          processed data in a browser.
+        </p>
+        <p>
+          Speed remained a factor, which I improved upon by breaking the program into seperate components, 
+          some code refactoring and careful data pull throttling on my side to maximize pull speed from the TD API 
+          and Selenium for option chains on the CBOE site. 
+          
+          More substantial improvements would likely require the employment of professional data feeds.
+        </p>
+
+        <h4>Post-Mortem: </h4>
+        <p>
+          If I did this project again, I would:
+        </p>
+        <p>
+          A) Focus on data providers with the most reliable data APIs at the start
+        </p>
+        <p>
+          B) Initially scope the program to be multiple components to cut down on complexity and calculation times
+        </p>
+
+
+    <hr>
+    </article>
+    <footer>
+      <p>© 2022 - Sebastian Quadrat<br>
+    </footer>
+  </body>
+</html>
+
