@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSJR4TTE87"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -66,15 +67,25 @@
         <h3><a href="gamma.html">Gamma Exposure Calculator</a></h3>
         <p>
           Built a calculator that estimates the gamma exposure of market makers using ingested option chain data.
-          This is useful in determining if market makers are being forced to buy or sell a certain asset in order
+          This is useful for determining if market makers are being forced to buy or sell a certain asset in order
           to maintain neutral footing. Input data came from the TD API (instrument pricing) and the CBOE website 
           (option chains) while processed data was outputted in the form of a matplotlib chart and a csv file 
           containing underlying data.
         </p>
+
+        <hr>
+        <h3><a href="m2.html">Predicting SPY threshold price based on U.S. Money Stock</a></h3>
+        <p>
+          Built a straightforward linear regression model to predict SPY based on U.S. Money Stock data. 
+          This is useful for determining a threshold price for SPY (market proxy), above which the market may be 
+          overvalued and below which the market may be undervalued. Input data came from the St. Louis Fed FRED
+          database (M2) and Yahoo Finance (historical SPY data), the model was built and analyzed using the 
+          sklearn library in Python while the resulting regression line was displayed using a matplotlib chart.
+        </p>
     <hr>
     </article>
     <footer>
-      <p>© 2022 - Sebastian Quadrat<br>
+      <p>© 2023 - Sebastian Quadrat<br>
     </footer>
   </body>
 </html>
