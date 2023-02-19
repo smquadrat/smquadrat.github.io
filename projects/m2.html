@@ -35,7 +35,7 @@
           U.S. Money Stock (M2 as proxy). This can be useful for determining a threshold price for the market, above 
           which it may be overvalued and below which it may be undervalued. Input data came from the St. Louis Fed FRED 
           database (monthly M2 data) and Yahoo Finance (historical SPY data), the model was built and analyzed using 
-          the sklearn library in Python while the resulting regression line was displayed using a matplotlib chart.
+          the sklearn library in Python while the resulting regression line was displayed using a Matplotlib chart.
         </p>
 
         <hr>
@@ -56,25 +56,28 @@
           in M2 in 2020 came in part from substantial Fed stimulus to help counter the adverse economic effects of the 
           COVID-19 pandemic (in addition to <a href="https://fredblog.stlouisfed.org/2021/01/whats-behind-the-recent-surge-in-the-m1-money-supply/">Regulation D</a> 
           implementation that year). 
-
+        <p>
+        
+        <p>
           Over a decade of easy monetary policy helped juice U.S. equity markets to all time highs, well out of historical 
           valuation bands. As US markets grew increasingly dependent on quantitative easing since the Great Recession, 
           Fed monetary policy became more scrutinized than ever by market participants as subsequent low rates and Fed 
           balance sheet expansion primed the economy through an expansion of U.S. money supply. 
-            
+        </p>
+        
+        <p>
           Equity markets are notoriously difficult to predict, with market participants focusing on a wide variety of 
           concrete and abstract variables in an attempt to predict market direction. Algorithmic trading systems based 
           on resulting models have become ever more complex in the pursuit of alpha. There is something to be said for a 
           simple market model that focuses on money supply to help determine if the market is currently trading above or 
-          below a valuation threshold in order to inform long term investment decisions.
-            
+          below a valuation threshold in order to inform long term investment decisions.   
         </p>
         <h4>Solution: </h4>
         <p>
           To build and analyze the model I decided to utilize Python and the popular open source sklearn machine learning 
           library due to its robust feature set, relative ease of use and because I wouldn't be working with an exceptionally 
           large dataset. Input data came from the St. Louis Fed FRED database for M2 and Yahoo Finance for SPY. The resulting 
-          regression line would be displayed using a matplotlib chart and a Python script would be used to pull updated M2 and 
+          regression line would be displayed using a Matplotlib chart and a Python script would be used to pull updated M2 and 
           SPY data to determine if current market pricing was running above or below the threshold price determined by the 
           latest available M2 value.
         </p>
@@ -95,7 +98,9 @@
           highly liquid but not intended to be routinely used as cash (as opposed to M1). I pulled monthly M2 data 
           from the St. Louis Fed FRED database going back to November 1980. I pulled SPY equity data going back to 
           January 1993 from Yahoo Finance. 
-          
+        </p>
+        
+        <p>
           For data preprocessing I aligned the two datasets by taking monthly stock price averages for SPY to account 
           for single trading session outliers and cleaned up data points where necessary. The resulting dataset 
           encompassed 29 years from the start of 1993 to the end of 2022.
@@ -162,7 +167,7 @@
           Examples could include business outlook surveys (i.e. the Manufacturing Business Outlook Survey released 
           by the Philadelphia Fed) and the Unemployment Insurance Weekly Claims Report released by the Department of 
           Labor. I would then utilize Lasso and Ridge regression models to determine how useful these additional 
-          independent variables are and to reduce model complexity.
+          independent variables are and reduce model complexity if needed.
         </p>
 
 

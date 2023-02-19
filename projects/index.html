@@ -30,10 +30,10 @@
         <h1>Projects</h1>
         <h2>Product</h2>
         <p>
-          I undertook the following product-focused side projects mainly to learn about what it takes to get an impactful
+          I undertook the following product-focused side projects mainly to learn about what it take an impactful
           product to market. Below are descriptions of each along with a link to a more detailed outline of my
           thinking across each one with details on the problem, solution, development process, final outcome 
-          and a post-mortem on what I would do differently if I repeated that project.
+          and a post-mortem on what I would do differently if I were to repeat the project.
         </p>
 
         <hr>
@@ -41,7 +41,7 @@
         <p>
           Built an investment insight-driven product to bridge the gap between frictionless investing apps 
           such as Robinhood and the often limited investing knowledge of their users. Utilized input from users, 
-          industry veterans and A/B testing to build an MVP centered around an investment insights feed. 
+          industry veterans and A/B testing to build a mobile app MVP centered around an investment insights feed. 
           I ultimately deprecated this project due to a lack of clarity around its monetization potential.
         </p>
 
@@ -56,31 +56,32 @@
         <h2>Programming</h2>
         <p>
           I undertook the following programming-focused side projects to learn how to build an app in Python 
-          and tinker around with some great open source libraries. I have worked with engineers in the past and had 
-          the opportunity to engage in the software development process around setting requirements,
-          project scoping, laying out key milestones, etc. However, building small useful apps from scratch 
-          helped me move beyond project planning and simple syntax to learning about classes & objects, 
-          refactoring code, integrating various libraries, Git for version control, getting a data dashboard 
-          up and running online, etc.
+          and tinker around with some great open source libraries including sklearn, NumPy, SciPy and Selenium. 
+          I have worked with engineers on a variety of different products, which gave me the opportunity to engage 
+          in the software development process around setting requirements, project scoping, laying out key milestones, 
+          etc. However, building useful apps from scratch helped me move beyond project planning and simple syntax to 
+          improving my experience with classes & objects, refactoring code, integrating various libraries, using Git 
+          for version control, getting a data dashboard up and running online, etc.
         </p>
         <hr>
-        <h3><a href="gamma.html">Gamma Exposure Calculator</a></h3>
+        <h3><a href="gamma.html">Gamma exposure calculator</a></h3>
         <p>
           Built a calculator that estimates the gamma exposure of market makers using ingested option chain data.
-          This is useful for determining if market makers are being forced to buy or sell a certain asset in order
-          to maintain neutral footing. Input data came from the TD API (instrument pricing) and the CBOE website 
-          (option chains) while processed data was outputted in the form of a matplotlib chart and a csv file 
-          containing underlying data.
+          This is useful in determining if market makers are being forced to buy or sell a certain asset in order
+          to maintain neutral footing. Input data came from the TD Ameritrade API (instrument pricing) and the 
+          Chicago Board Options Exchange (CBOE) website (option chains) while processed data was outputted in 
+          the form of a Matplotlib chart and a CSV file containing underlying data.
         </p>
 
         <hr>
-        <h3><a href="m2.html">Predicting SPY threshold price based on U.S. Money Stock</a></h3>
+        <h3><a href="m2.html">SPY threshold price calculator based on U.S. Money Stock</a></h3>
         <p>
-          Built a straightforward linear regression model to predict SPY based on U.S. Money Stock data. 
-          This is useful for determining a threshold price for SPY (market proxy), above which the market may be 
-          overvalued and below which the market may be undervalued. Input data came from the St. Louis Fed FRED
-          database (M2) and Yahoo Finance (historical SPY data), the model was built and analyzed using the 
-          sklearn library in Python while the resulting regression line was displayed using a matplotlib chart.
+          Built a calculator based on a regression model to determine how the equity market (SPY as proxy) is trading 
+          in relation to the U.S. Money Stock (M2 as proxy). This can be useful for determining a threshold price for 
+          the market, above which it may be overvalued and below which it may be undervalued. Input data came from the 
+          St. Louis Fed FRED database (monthly M2 data) and Yahoo Finance (historical SPY data), the model was built 
+          and analyzed using the sklearn library in Python while the resulting regression line was displayed using a 
+          Matplotlib chart.
         </p>
     <hr>
     </article>
