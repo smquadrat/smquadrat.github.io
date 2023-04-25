@@ -23,69 +23,71 @@
       Sebastian Quadrat
     </header>
     <nav>
-        <a href="index.html">Projects</a>
+        <a href="index.html" class="bold-link">Projects</a>
         <a href="../index.html">About</a>
     </nav>
     <article>
-        <h1>Projects</h1>
         <h2>Product</h2>
         <p>
-          I undertook the following product-focused side projects to learn about what it takes to develop an 
-          impactful software product from scratch. Below are project descriptions along with links to detailed 
-          outlines with my thinking across the problem, solution, development process, final outcome and a 
-          post-mortem for each project.
+          I undertook the following product-focused side projects to learn about 
+          what it takes to develop an impactful software product from scratch. 
+          Below are project descriptions along with links to detailed outlines 
+          with my thinking across the problem, solution, development process, 
+          final outcome and a post-mortem for each project.
         </p>
-
-        <hr>
         <h3><a href="bloomberg.html">Bloomberg for the masses</a></h3>
         <p>
-          Built an investment insight-driven product to bridge the gap between frictionless investing apps 
-          such as Robinhood and the often limited investing knowledge of their users. Utilized input from users, 
-          industry veterans and A/B testing to build a mobile app MVP centered around an investment insights feed. 
-          I ultimately deprecated this project due to a lack of clarity around its monetization potential.
+          Built an investment insights product to bridge the gap between frictionless 
+          investing apps such as Robinhood and the often limited investing knowledge 
+          of their users.
         </p>
-
-        <hr>
         <h3><a href="points.html">Debit card point API for financial institutions</a></h3>
         <p>
-          Built an API that would give point collecting capabilities to debit cards issued by small to mid-sized
-          financial institutions (i.e. credit unions and regional banks). Even though there was strong interest
-          from two potential MVP candidates, the technical complexities around integrating with antiquated on-prem systems
-          proved too great and I didn't pursue this project to the implementation phase.
+          Built an API that would give point collecting capabilities to debit cards 
+          issued by small to mid-sized financial institutions (e.g. credit unions and 
+          regional banks).
         </p>
+        <hr>
         <h2>Programming</h2>
         <p>
-          I undertook the following programming-focused side projects to learn about how to build apps from scratch to solve
-          actual challenges and to become more familiar with some great open source libraries including sklearn, NumPy, 
-          SciPy and Selenium in the process. I have worked with software engineers on a variety of different products, 
-          which gave me the opportunity to engage in the software development process around setting product requirements, 
-          product scope, laying out key milestones, etc. However, building useful apps from the ground up helped me move 
-          beyond project planning and simple syntax to improving my experience with classes & objects, refactoring code 
-          for speed and efficiency, integrating various libraries, using Git for version control, getting data dashboards 
-          up and running online, etc. Similar to the product section above, the links below contain detailed outlines of 
-          my thought process for each programming project listed.
+          I undertook the following programming-focused side projects to get experience 
+          building apps from scratch to solve challenges. This helped me move beyond product 
+          planning and syntax to working with classes & objects, refactoring code for speed 
+          and efficiency, integrating various libraries, using Git for version control, 
+          getting data dashboards up and running online, etc. The projects below are broken up 
+          into detailed study projects with write-ups and velocity-driven projects with GitHub 
+          and web service links where available (note that they may take a few moments to spool up).
         </p>
         <hr>
+        <h3>Detailed Study Projects</h3>
         <h3><a href="gamma.html">Gamma exposure calculator</a></h3>
         <p>
-          Built a calculator that estimates the gamma exposure of market makers using ingested option chain data.
-          This is useful in determining if market makers are being forced to buy or sell a certain asset in order
-          to maintain neutral footing. Input data came from the TD Ameritrade API (instrument pricing) and the 
-          Chicago Board Options Exchange (CBOE) website (option chains) while processed data was outputted in 
-          the form of a Matplotlib chart and a CSV file containing underlying data.
+          Built a calculator that estimates the gamma exposure of market makers using ingested 
+          option chain data. This can be useful for determining if market makers are being 
+          forced to buy or sell a certain asset in order to maintain neutral footing.
         </p>
-
-        <hr>
         <h3><a href="m2.html">SPY threshold price calculator based on U.S. Money Stock</a></h3>
         <p>
-          Built a calculator based on a regression model to determine how the equity market (SPY as proxy) is trading 
-          in relation to the U.S. Money Stock (M2 as proxy). This can be useful for determining a threshold price for 
-          the market, above which it may be overvalued and below which it may be undervalued. Input data came from the 
-          St. Louis Fed FRED database (monthly M2 data) and Yahoo Finance (historical SPY data), the model was built 
-          and analyzed using the sklearn library in Python while the resulting regression line was displayed using a 
-          Matplotlib chart.
+          Built a calculator based on a regression model to determine how the equity market 
+          is trading in relation to the U.S. Money Stock. This can be useful for determining 
+          a threshold price for the market, above which it may be overvalued and below which 
+          it may be undervalued.
         </p>
-    <hr>
+        <hr>
+        <h3>Velocity-driven Projects (GitHub links)</h3>
+        <h3><a href="https://github.com/smquadrat/earnings-call-sentiment-app">Earnings Call Sentiment Analysis Tool</a> <a href="https://earnings-call-sentiment-app.onrender.com/">[Demo]</a></h3>
+        <p>Derives an earnings call sentiment score for given transcript based on the VADER (Valence Aware Dictionary and sEntiment Reasoner) model</p>
+        <h3><a href="https://github.com/smquadrat/oil-price-predictor-lstm-model-app">Oil Price Predictor LSTM Model</a></h3>
+        <p>Forecasts crude oil prices based on an LSTM (long short-term memory) RNN (recurrent neural network) model</p>
+        <h3><a href="https://github.com/smquadrat/japanese-text-computer-vision-app">Japanese Text OCR Computer Vision Tool</a></h3>
+        <p>Translates Japanese text in an uploaded image using the Tesseract OCR (optical character recognition) computer vision engine and the Google Translate api</p>
+        <h3><a href="https://github.com/smquadrat/la-metro-live-map-app">Los Angeles Metro Live Map</a> <a href="https://la-metro-live-map-app.onrender.com/">[Demo]</a></h3>
+        <p>Displays a real-time visual representation of train positions across the Los Angeles metro system</p>
+        <h3><a href="https://github.com/smquadrat/weather-app">Weather Forecast</a> <a href="https://weather-app-aw0x.onrender.com/">[Demo]</a></h3>
+        <p>Shows weather forecast for any given location including temperature, precipitation and UV index data</p>
+        <h3><a href="https://github.com/smquadrat/nikkei-japanese-vocab-app">Nikkei Japanese Vocabulary Training</a> <a href="https://nikkei-vocab-app.onrender.com/">[Demo]</a></h3>
+        <p>Serves up the most often used vocabulary in the Nikkei newspaper for training purposes</p>
+        <hr>
     </article>
     <footer>
       <p>© 2023 - Sebastian Quadrat<br>
